@@ -2,6 +2,7 @@
 const path = require("path");
 const express = require("express");
 const fs = require("fs");
+const { Console } = require("console");
 const app = express();
 
 // ==========> creamos la ruta a los archivos estáticos
@@ -25,6 +26,8 @@ app.get("/login", (req, res) =>{
 
 
 // ==========> creamos el servidor y le pasamos un mensaje para verificar su funcionalidad
-app.listen(3000, () => {
-  console.log("El servidor está funcionando");
-});
+//app.listen(3000, () => {
+//  console.log("El servidor está funcionando");
+//});
+const port = process.env.PORT || 3001;
+app.listen(port, ()=>console.log(`Servidor corriendo en el puerto ${port}`));
