@@ -56,7 +56,7 @@ header {
 .search {
     width: 95%;
     height: 80%;
-    border: 1px solid grey;
+    border: 1px solid white;
     border-radius: 5px;
 }
 
@@ -160,6 +160,7 @@ main {
     left: 290px;
     bottom: 30px;
     align-content: center;
+    transition: all 0.5s;
   }
   
   
@@ -184,7 +185,7 @@ footer {
 
 footer-style {
     text-align: center;
-    margin: 20px;
+    margin-bottom: 13px ;
   }
   
   .fa-credit-card,
@@ -195,13 +196,12 @@ footer-style {
     color: #03264c;
   }
 
-/* CSS Footer*/
+/* CSS Mobile */
 .navigation-menu {
   display: none;
 }
 
-/* Mobile First */ 
-@media screen and (min-with: 769px) {
+@media screen and (min-with: 320px) {
     
     .description {
         display: none;
@@ -241,11 +241,6 @@ footer-style {
       gap: 20px;
     }
   
-    .last-visited,
-    .offers {
-      margin: 10px 0 10px 20px;
-    }
-
     .titles{
       margin: 10px 10px 10px 20px;
     }
@@ -396,4 +391,12 @@ footer-style {
     flex-direction: row;
     justify-content: center;
   }
+
+  .fa-credit-card:hover,
+  .fa-gift:hover,
+  .fa-user-shield:hover {
+    color: #0022aa;
+  }
+
+
 }
