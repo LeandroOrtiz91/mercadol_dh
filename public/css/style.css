@@ -96,10 +96,13 @@ a {
 }
 /* Main */
 main {
-    width: 90%;
+    width: 100vw;
     margin: 0 auto;
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 15px;
+    
   }
   
   .banner {
@@ -127,10 +130,13 @@ main {
     background-color: white;
     max-width: 360px;
     margin-bottom: 10px;
+    display: block;
+    width: 100%;
   }
   
   .product-img {
     width: 100%;
+
   }
   
   .product-detail {
