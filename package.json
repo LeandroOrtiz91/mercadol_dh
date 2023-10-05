@@ -1,10 +1,10 @@
 {
-  "name": "html_css",
+  "name": "ModeloMELI",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "index.js",
   "scripts": {
-    "test": "nodemon app,js",
+    "test": "nodemon app.js",
     "start": "node app.js",
     "dev": "nodemon app.js"
   },

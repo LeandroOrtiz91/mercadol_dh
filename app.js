@@ -1,33 +1,23 @@
-// ==========> requerimos los módulos para trabajar
-const path = require("path");
 const express = require("express");
 const fs = require("fs");
-const { Console } = require("console");
+const path = require("path");
+
 const app = express();
+const puerto = process.env.PORT || 3001;
 
-// ==========> creamos la ruta a los archivos estáticos
-const ruta = path.join(__dirname, "public");
-const staticFiles = express.static(ruta);
-
-app.use(staticFiles);
+app.use(express.json());
+app.use("/", express.static(__dirname + "/public"));
 
 app.get("/", (req, res) => {
-  let ruta = path.join(__dirname, "./views/index.html");
-  res.sendFile(ruta);
+  res.sendFile(path.join(__dirname, "/views/home.html"));
+});
+app.get("/register", (req, res) => {
+  res.sendFile(path.join(__dirname, "/views/register.html"));
+});
+app.get("/login", (req, res) => {
+  res.sendFile(path.join(__dirname, "/views/login.html"));
 });
 
-app.get("/register", (req, res) =>{
-  res.sendFile(__dirname + "/views/register.html");
+app.listen(puerto, () => {
+  console.log("Aplicación en puerto http://localhost:" + puerto);
 });
-
-app.get("/login", (req, res) =>{
-  res.sendFile(__dirname + "/views/login.html");
-});
-
-
-// ==========> creamos el servidor y le pasamos un mensaje para verificar su funcionalidad
-//app.listen(3000, () => {
-//  console.log("El servidor está funcionando");
-//});
-const port = process.env.PORT || 3001;
-app.listen(port, ()=>console.log(`Servidor corriendo en el puerto ${port}`));
