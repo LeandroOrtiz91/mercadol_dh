@@ -3,74 +3,85 @@
 <html lang="es">
 <!--Head-->
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1">
-  <meta http-equiv="Content-Language" content="es">
-  <title>Mercado Liebre</title>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
-    rel="stylesheet"
-  />
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="/css/style.css">
-  <link rel="stylesheet" href="/css/login-register.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login - Mercado Liebre</title>
+    <link rel="stylesheet" href="/css/login.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="/images/logo.png " />
 </head>
 
 <!--Body-->
 <body>
 <!--Header-->
   <header>
-      <div class="header-top">
-        <img class="logo" src="/img/logo-mercado-liebre.svg" alt='Logo Mercado Liebre'>
+    <div class="contenedor-header">
+      <div class="logo">
+        <a href="/">
+          <img src="/images/logo-mercado-liebre.svg" />
+        </a>
       </div>
-      <form class="search-bar">
-        <button id="button-search"><i class="fas fa-search"></i></button>
-        <input class="search" type="search" name="search-bar" placeholder="Buscar productos, marcas">
+      <form class="buscador">
+        <input
+          type="text"
+          name="keywords"
+          placeholder="Buscar productos, marcas y más"
+          class="buscador-input"
+        />
+        <button type="submit" class="buscador-boton">
+          <i class="fas fa-search"></i>
+        </button>
       </form>
-      <div class="buy-options">
-          <p><i class="fas fa-hand-holding-usd" style="color: #000000"></i> Comprá en cuotas y sin tarjeta de crédito</p>
-      </div>
-      <nav class="navigation-menu">
-          <ul class="nav-access">
-            <li><a href="#"><i class="fas fa-tag"></i> Ofertas</a></li>
-            <li><a href="#"><i class="fas fa-store"></i> Tiendas Oficiales</a></li>
-            <li><a href="#"><i class="fas fa-shopping-cart"></i> Vender</a></li>
-            <li><a href="#"><i class="fas fa-question-circle"></i> Ayuda</a></li>
-          </ul>
-          <ul id="user-list">
-            <li><a href="/register"><i class="far fa-id-card"></i> Creá tu cuenta</a></li>
-            <li><a href="/login"><i class="fas fa-sign-in-alt"></i> Ingresá</a></li>
-            <li><a href="#"><i class="fas fa-shopping-basket"></i> Mis compras</a></li>
-        </ul>
-      </nav>
-      <div class="burger-menu">
-        <i class="fas fa-bars"></i>
+      <h2 class="destacado">
+        <i class="fas fa-hand-holding-usd"></i>
+        Comprá en cuotas y sin tarjeta de crédito
+      </h2>
     </div>
+    <nav class="listas">
+      <ul>
+        <li><a href="#">Ofertas</a></li>
+        <li><a href="#">Tiendas Oficiales</a></li>
+        <li><a href="#">Vender</a></li>
+        <li><a href="#">Ayuda</a></li>
+      </ul>
+      <ul>
+        <li>
+          <a href="/register">Creá tu cuenta</a>
+          <i class="fas fa-id-card"></i>
+        </li>
+        <li>
+          <a href="/login">Ingresá</a>
+          <i class="fas fa-sign-in-alt"></i>
+        </li>
+        <li>
+          <a href="#">Mis compras</a>
+          <i class="fas fa-shopping-basket"></i>
+        </li>
+      </ul>
+    </nav>
+    <a href="#" class="burger-menu">
+      <i class="fas fa-bars"></i>
+    </a>
   </header>
-
-  <img class="banner" src="/img/img-home-banner.jpg" alt='Logo Mercado Liebre'> 
 
 <!--Main-->
 <main>
-  <h2>Iniciar sesión</h2>
+  <div class="banner">
+        <img src="/images/img-home-banner.jpg" class="banner" />
+      </div>
+      <h1 class="title">Login de Usuario</h1>
+      <form class="form">
+        <label for="usuario">Nombre de usuario:</label><br />
+        <input type="text" id="usuario" name="usuario" /><br /><br />
 
-  <section class="form">
-    <form action="/login" method="post">
-      <div class="email">
-        <label for="email"></label>
-        <input type="email" id="email" name="email" required placeholder="Email">
-      </div>
-      
-      <div class="password">
-      <label for="password"></label>
-      <input type="password" id="password" name="password" required placeholder="Contraseña"><br><br>
-      </div>
+        <label for="password">Contraseña:</label><br />
+        <input type="password" id="password" name="password" /><br /><br />
 
-      <div class="submit">
-      <button type="submit">Iniciar sesión</button>
-      </div>
-    </form>
-  </section>
+        <input type="submit" value="Enviar" />
+      </form>
 </main>
 
 <!--Footer-->

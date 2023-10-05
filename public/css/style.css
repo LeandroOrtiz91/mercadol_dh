@@ -1,408 +1,346 @@
 /* Selector universal */
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
+  *{
+    /* Tamaño de la caja a border-box para que el relleno 
+    y el borde no se sumen al ancho y alto del elemento. */
+      box-sizing: border-box; 
+    /* Margen y relleno a 0 para eliminar el margen 
+    predeterminado de los elementos. */
+      margin: 0;
+      padding: 0;
+  }
 
 /* Body */
-body{
-    font-size: 12px;
-    font-family: roboto;
-    background-color: #ebebeb;
-}
+  body {
+  /* Fuente de la familia "arial", sans-serif. */
+    font-family: "arial", sans-serif;
+    margin: 0;
+    padding: 0;
+  }
 /* Header */
-header {
-    background-color: #eac916;
-    padding: 10px;
-}
-
-.logo {
-    width: 50%;
-    display: inline;
-    margin-left: 10px;
-}
-
-.header-top {
-    display: flex;
-    justify-content: space-between;
-}
-
-.search-bar{
-    padding-top: 5px;
-    position: relative;
-}
-
-.fa-search {
-    background-color: white;
-}
-
-#button-search {
-  background-color: white;
-  border: 1px solid white;
-  color: #666;
-  position: absolute;
-  right: 24px;
-  margin-top: 10px;
-  cursor: pointer;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-#button-search i {
-  line-height: 1; 
-}
-
-.search {
-    width: 95%;
-    height: 80%;
-    border: 1px solid white;
-    border-radius: 5px;
-}
-
-.fa-hand-holding-usd {
-    margin-right: 5px;
-}
-
-.buy-options {
-  display: flex;
-  justify-content: center;
-  margin: 20px;
-  font-size: 13px;
-}
-
-a {
-    text-decoration: none;
-    color: black;
-}
-  
-.fa-id-card,
-.fa-sign-in-alt,
-.fa-shopping-basket {
-    margin-left: 5px;
-    color: 000000;
-}
-  
-.burger-menu {
-    margin: auto;
-    background-color: #03264c;
-    color: white;
-    width: 35px;
-    height: 35px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 5px;
-}
-/* Main */
-main {
+  header {
+  /* Color de fondo*/
+    background-color: #eac926;
+  /* Relleno a 20px para agregar un poco de espacio 
+  entre el borde del encabezado y el contenido del encabezado.*/
+    padding: 20px;
+  /* Ancho a 100vw para que el encabezado ocupe todo el ancho de la ventana.*/
     width: 100vw;
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 15px;
-    
+  /* Margen a auto para centrar el encabezado en la página.*/
+    margin: auto;
   }
-  
-  .banner {
-    width: 100%;
-    
-  }
-  
-  .last-visited,
-  .offer-product {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .titles {
-    width: 90%;
-    text-align: start;
-    margin: 1rem;
-    font-size: 24px;
-    color: #666;
-  }
-
-  .product {
-    background-color: white;
-    max-width: 360px;
-    margin-bottom: 10px;
-    display: block;
-    width: 100%;
-  }
-  
-  .product-img {
-    width: 100%;
-
-  }
-  
-  .product-detail {
-    border-top: 1px solid #ebebeb;
-    padding: 15px;
-  }
-  
-  .product-discount {
-    display: flex;
-    position: relative;
-    justify-content: start;
-    align-items: baseline;
-    width: 100%;
-    gap: 15px;
-  }
-  
-  .truck-icon {
-    display: block;
-    font-size: 16px;
-    padding: 5px;
-    width: 30px;
-    height: 30px;
-    border: 1px solid #39b54a;
-    background-color: #fff;
-    border-radius: 50%;
-    position: relative;
-    left: 290px;
-    bottom: 30px;
-    align-content: center;
-    transition: all 0.5s;
-  }
-  
-  
-  .price {
-    font-size: 18px;
-  }
-  
-  .discount {
-    font-size: 16px;
-  }
-  
-  .description {
-    display: none;
-    font-size: 16px;
-    color: #666;
-  }
-/* Footer */
-footer {
+.contenedor-header {
+  /* Pantalla a flex para que los elementos secundarios del 
+  encabezado se puedan organizar en una fila.*/
+  display: flex;
+  /* Ajuste de flexión a wrap para que los elementos secundarios 
+  del encabezado se muevan a la siguiente línea si no hay suficiente 
+  espacio en la línea actual.*/
+  flex-wrap: wrap;
+  /* Alineación de los elementos a center para que los elementos 
+  secundarios del encabezado se alineen verticalmente al centro.*/
+  align-items: center;
+  /* Margen inferior a 10px para agregar un poco de espacio 
+  entre el encabezado y el contenido del encabezado.*/
+  margin-bottom: 10px;
+  /* Ancho máximo a 1200px para que el encabezado 
+  no sea demasiado ancho en pantallas grandes.*/
+  max-width: 1200px;
+  /* Alineación del texto a center para que el contenido 
+  del encabezado se alinee horizontalmente al centro.*/
   text-align: center;
-  margin: 20px;
+  /* Margen a auto para centrar el encabezado en la página.*/
+  margin: auto;
 }
-
-footer-style {
-    text-align: center;
-    margin-bottom: 13px ;
-  }
-  
-  .fa-credit-card,
-  .fa-gift,
-  .fa-user-shield {
-    font-size: 2em;
-    margin-bottom: 10px;
-    color: #03264c;
-  }
-
-/* CSS Mobile */
-.navigation-menu {
+.logo {
+  /* Ancho a 50% para que el logotipo ocupe la 
+  mitad del ancho del encabezado. */
+  width: 50%;
+}
+.search {
+  /* Posición a relative para que el botón de búsqueda 
+  se pueda posicionar absolutamente dentro del buscador.*/
+  position: relative;
+  /* Pantalla a flex para que los elementos secundarios 
+  del buscador se puedan organizar en una fila.*/ 
+  display: flex;
+  /* Alineación de los elementos a center para que los 
+  elementos secundarios del buscador se alineen verticalmente al centro.*/
+  align-items: center;
+  /* Ancho a 50% para que el buscador ocupe la mitad del ancho del encabezado.*/
+  width: 50%;
+}
+.search-input {
+  /* El borde a 1px sólido gris*/
+  border: solid 1px var(--light-gray);
+  /* Pantalla a block para que el campo de búsqueda ocupe todo el ancho del buscador.*/
+  display: block;
+  /* Ancho a 100% para que el campo de búsqueda ocupe todo el ancho del buscador.*/
+  width: 100%;
+  /* relleno para agregar un poco de espacio entre el borde del 
+  campo de búsqueda y el contenido del campo de búsqueda.*/
+  padding: 7px 35px 7px 7px;
+  /* Radio del borde a 5px para que el campo de búsqueda tenga esquinas redondeadas.*/
+  border-radius: 5px;
+  height: 40px;
+  font-size: 1em;
+}
+.seach-button {
+  position: absolute;
+  right: 2px;
+  height: 60%;
+  background-color: #ffffff;
+  border: none;
+  border-left: solid 1px var(--light-gray);
+  color: var(--gray);
+  cursor: pointer;
+}
+.lists {
   display: none;
 }
-
-@media screen and (min-with: 320px) {
-    
-    .description {
-        display: none;
-      }
-      
-      .navbar {
-        display: none;
-      }
+.lists ul {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.lists a {
+  text-decoration: none;
+  color: #222222;
+  padding: 5px 0;
+  font-size: 14px;
+}
+.banner {
+  width: 100vw;
+  text-align: center;
+  margin: auto;
+}
+.burger-menu {
+  display: block;
+  background-color: #1259c3;
+  color: #ffffff;
+  max-width: 40px;
+  max-height: 40px;
+  padding: 10px 0;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 18px;
+  margin: auto;
 }
 
-/* Media Query Tablet */ 
+main {
+  /* Color de fondo */
+  background-color: #ebebeb;
+}
+.contenedor-main {
+  /* Ancho máximo a 1200px para que el contenido 
+  principal de la página no sea demasiado ancho en pantallas grandes. */
+  max-width: 1200px;
+  width: 100vw;
+  padding: 15px;
+  margin: auto;
+  margin-top: -4px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.article {
+  display: block;
+  background-color: white;
+  width: 100%;
+  border: solid 1px #ebebeb;
+  margin: auto;
+  margin-bottom: 25px;
+  border-radius: 10px;
+  transition: all 0.2s;
+}
+.article-description {
+  position: relative;
+  padding: 0 15px 0 15px;
+}
+.products {
+  width: 100%;
+  border-bottom: solid 1px #ebebeb;
+  margin: auto;
+  border-radius: 10px;
+  transition: all 450ms;
+}
+.bodyText {
+  font-size: 12px;
+  color: #666;
+  text-align: center;
+}
+.titles {
+  font-size: 24px;
+  width: 95%;
+  color: #666;
+}
+.prices {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+.discount {
+  font-size: 18px;
+  color: #39b54a;
+  font-style: normal;
+  margin-left: 10%;
+}
+.descriptions {
+  display: none;
+  font-size: 16px;
+  margin-bottom: 15px;
+  color: #666;
+  transition: all 1s;
+}
+.destacado {
+  font-family: roboto;
+  font-size: 12px;
+  font-weight: 400;
+  text-align: center;
+  width: 100%;
+}
+.fa-truck {
+  display: block;
+  font-size: 16px;
+  color: #39b54a;
+  border: solid 1px #39b54a;
+  padding: 5px;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  background-color: #fff;
+  position: absolute;
+  right: 20px;
+  top: -53px;
+  transition: all 450ms;
+}
+
+footer {
+  background-color: white;
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+}
+.sections-footer {
+  text-align: center;
+  padding: 0 10px;
+}
+.sections-footer h4 {
+  margin-top: 0px;
+  margin-bottom: -10px;
+}
+.fa-credit-card {
+  color: #1259c3;
+  font-size: 2em;
+  margin-bottom: 10px;
+  display: block;
+  text-align: center;
+  transition: all 450ms;
+}
+.fa-gift {
+  color: #1259c3;
+  font-size: 2em;
+  margin-bottom: 10px;
+  display: block;
+  text-align: center;
+  transition: all 450ms;
+}
+.fa-user-shield {
+  color: #1259c3;
+  font-size: 2em;
+  margin-bottom: 10px;
+  display: block;
+  text-align: center;
+  transition: all 450ms;
+}
+
 @media (min-width: 426px) {
-    .logo {
-      width: 50%;
-    }
-  
-    .search {
-      width: 80%;
-      height: 40px;
-    }
-  
-    .search-bar {
-      margin-right: 10px;
-      position: relative;
-    }
-  
-    .header-top {
-      justify-content: left;
-    }
-  
-    .last-visited,
-    .offer-product {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-    }
-  
-    .titles{
-      margin: 10px 10px 10px 20px;
-    }
-  
-    .description {
-      display: block;
-      margin-top: 10px;
-    }
-  
-    .buy-options {
-      font-size: 20px;
-    }
-  
-    .fa-search {
-      font-size: 22px;
-    }
-  
-    .search-bar {
-      display: flex;
-      justify-content: end;
-      align-content: center;
-      height: 50%;
-      width: 50%;
-      padding-top: 30px;
-      position: relative;
-    }
-  
-    .search {
-      margin-left: 5px;
-    }
-  
-    .product {
-      box-shadow: 0px 0px 10px rgb(100, 100, 100);
-      max-width: 315px;
-    }
-  
-    .truck-icon {
-      display: block;
-      font-size: 16px;
-      padding: 5px;
-      width: 30px;
-      height: 30px;
-      border: 1px solid #39b54a;
-      background-color: #fff;
-      border-radius: 50%;
-      position: relative;
-      left: 250px;
-      bottom: 30px;
-      align-content: center;
-    }
-  
-    .navigation-menu {
-      display: flex;
-      justify-content: space-between;
-      margin: 0 10px 0 10px;
-    }
-    .nav-access {
-      display: inline-flex;
-      justify-content: flex-start;
-      flex-direction: row;
-      font-size: 15px;
-      list-style-type: none;
-      gap: 15px;
-    }
-  
-    .user-list {
-      display: inline-flex;
-      justify-content: flex-end;
-      flex-direction: row;
-      font-size: 15px;
-      list-style-type: none;
-      gap: 15px;
-    }
-  
-    .burger-menu {
-      display: none;
-    }
-  
-    footer {
-      font-size: 20px;
-    }
+  .burger-menu {
+    display: none;
   }
-
-
-/* Media Query Desktop */
-@media (min-width: 769px) {
-  main {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  .titles {
-    margin: 10px 10px 10px 17px;
-  }
-
-  .navigation-menu {
+  .contenedor-header {
     display: flex;
     justify-content: space-between;
-    margin-left: 25px;
   }
-  .nav-access {
-    display: inline-flex;
-    justify-content: start;
-    flex-direction: row;
-    font-size: 20px;
-    list-style-type: none;
-    gap: 25px;
+  .logo {
+    width: 40%;
   }
-
-  .user-list {
-    display: inline-flex;
-    justify-content: end;
-    flex-direction: row;
-    font-size: 20px;
-    list-style-type: none;
-    gap: 25px;
+  .destacado {
+    text-align: right;
+    width: 30%;
+    font-size: 11px;
   }
-
-  .product {
-    max-width: 285px;
-    margin-left: 20px;
-    transition: all 0.5s;
+  .buscador {
+    display: flex;
+    align-items: center;
+    width: 30%;
   }
-
-  .truck-icon {
-    left: 220px;
+  .buscador-input {
+    font-size: 1em;
   }
-
-  .description {
-    color: white;
-    transition: all 0.5s;
+  .listas {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
   }
-
-  .product:hover {
+  .listas ul {
+    display: flex;
+  }
+  .listas li {
+    margin: 0 5px;
+    font-size: 11px;
+  }
+  .listas a {
+    font-size: 11px;
+  }
+  .articulo {
+    width: 45%;
+  }
+  .articulo:hover {
     box-shadow: 0px 0px 10px rgb(100, 100, 100);
   }
-
-  .product:hover .description {
-    color: #666;
+  .articulo:hover .descripciones {
+    display: block;
   }
-
-  .product:hover .truck-icon {
+  .articulo:hover .fa-truck {
+    box-shadow: 0px 0px 10px #39b54a;
     transform: rotate(-90deg);
   }
+}
 
-  footer {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+@media (min-width: 769px) {
+  .logo {
+    width: 250px;
   }
-
+  .contendor-header,
+  .listas {
+    max-width: 1200px;
+    margin: auto;
+  }
+  .contendor-header {
+    align-items: center;
+  }
+  .articulo {
+    width: 20%;
+  }
+  .destacado {
+    font-size: 18px;
+  }
+  .listas {
+    margin-top: 30px;
+  }
+  .listas li {
+    margin: 0 10px;
+    font-size: 19px;
+  }
+  .listas a {
+    font-size: 19px;
+  }
+  .contenedor-footer {
+    display: flex;
+  }
   .fa-credit-card:hover,
   .fa-gift:hover,
   .fa-user-shield:hover {
-    color: #0022aa;
+    color: #140066;
   }
-
-
 }
