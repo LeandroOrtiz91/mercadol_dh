@@ -28,7 +28,7 @@
   /* Margen a auto para centrar el encabezado en la página.*/
     margin: auto;
   }
-.contenedor-header {
+.container-header {
   /* Pantalla a flex para que los elementos secundarios del 
   encabezado se puedan organizar en una fila.*/
   display: flex;
@@ -131,7 +131,7 @@ main {
   /* Color de fondo */
   background-color: #ebebeb;
 }
-.contenedor-main {
+.container-main {
   /* Ancho máximo a 1200px para que el contenido 
   principal de la página no sea demasiado ancho en pantallas grandes. */
   max-width: 1200px;
@@ -191,7 +191,7 @@ main {
   color: #666;
   transition: all 1s;
 }
-.destacado {
+.featured {
   font-family: roboto;
   font-size: 12px;
   font-weight: 400;
@@ -257,51 +257,51 @@ footer {
   .burger-menu {
     display: none;
   }
-  .contenedor-header {
+  .container-header {
     display: flex;
     justify-content: space-between;
   }
   .logo {
     width: 40%;
   }
-  .destacado {
+  .featured {
     text-align: right;
     width: 30%;
     font-size: 11px;
   }
-  .buscador {
+  .seach {
     display: flex;
     align-items: center;
     width: 30%;
   }
-  .buscador-input {
+  .search-input {
     font-size: 1em;
   }
-  .listas {
+  .lists {
     display: flex;
     justify-content: space-between;
     margin-top: 15px;
   }
-  .listas ul {
+  .lists ul {
     display: flex;
   }
-  .listas li {
+  .lists li {
     margin: 0 5px;
     font-size: 11px;
   }
-  .listas a {
+  .lists a {
     font-size: 11px;
   }
-  .articulo {
+  .article {
     width: 45%;
   }
-  .articulo:hover {
+  .article:hover {
     box-shadow: 0px 0px 10px rgb(100, 100, 100);
   }
-  .articulo:hover .descripciones {
+  .article:hover .descripciones {
     display: block;
   }
-  .articulo:hover .fa-truck {
+  .article:hover .fa-truck {
     box-shadow: 0px 0px 10px #39b54a;
     transform: rotate(-90deg);
   }
@@ -311,31 +311,31 @@ footer {
   .logo {
     width: 250px;
   }
-  .contendor-header,
+  .container-header,
   .listas {
     max-width: 1200px;
     margin: auto;
   }
-  .contendor-header {
+  .container-header {
     align-items: center;
   }
-  .articulo {
+  .article {
     width: 20%;
   }
-  .destacado {
+  .featured {
     font-size: 18px;
   }
-  .listas {
+  .lists {
     margin-top: 30px;
   }
-  .listas li {
+  .lists li {
     margin: 0 10px;
     font-size: 19px;
   }
-  .listas a {
+  .lists a {
     font-size: 19px;
   }
-  .contenedor-footer {
+  .container-footer {
     display: flex;
   }
   .fa-credit-card:hover,
